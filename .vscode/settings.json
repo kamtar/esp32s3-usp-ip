@@ -1,0 +1,11 @@
+{
+    "idf.currentSetup": "C:\\Users\\tomul\\esp\\v5.5\\esp-idf",
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3"
+    },
+    "idf.flashType": "UART",
+    "idf.portWin": "COM15",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ]
+}

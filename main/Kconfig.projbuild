@@ -1,0 +1,48 @@
+menu "USB/IP Host Configuration"
+
+    config USBIP_WIFI_SSID
+        string "Wi-Fi SSID"
+        default "MyNetwork"
+        help
+            SSID of the Wi-Fi access point to connect to.
+
+    config USBIP_WIFI_PASSWORD
+        string "Wi-Fi Password"
+        default "MyPassword"
+        help
+            Password for the Wi-Fi access point.
+
+    config USBIP_SERVER_PORT
+        int "USB/IP server TCP port"
+        default 3240
+        help
+            TCP port for the USB/IP server. Standard USB/IP port is 3240.
+
+    config USBIP_MAX_DEVICES
+        int "Maximum simultaneous USB devices"
+        default 1
+        range 1 4
+        help
+            Maximum number of USB devices that can be attached simultaneously.
+
+    config USBIP_DEBUG_LOGS
+        bool "Enable verbose USB/IP debug logs"
+        default y
+        help
+            Sets usbip_server, usb_host_drv and wifi_log tags to DEBUG level.
+
+    config USBIP_WIFI_LOG_ENABLE
+        bool "Enable Wi-Fi telnet log server"
+        default y
+        help
+            Expose ESP-IDF logs over TCP so logs can be viewed without USB serial.
+
+    config USBIP_WIFI_LOG_PORT
+        int "Wi-Fi telnet log TCP port"
+        default 23
+        range 1 65535
+        depends on USBIP_WIFI_LOG_ENABLE
+        help
+            TCP port used by the onboard log server.
+
+endmenu

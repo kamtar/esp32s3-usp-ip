@@ -1,0 +1,27 @@
+# ESP-IDF build output
+build/
+
+# CMake/Ninja transient files at repo root
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
+.ninja_deps
+.ninja_log
+
+# Local sdkconfig backups
+sdkconfig.old
+sdkconfig.*.old
+
+# Local environment files
+config.env
+
+# Common OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Python cache (tooling scripts)
+__pycache__/
+*.pyc

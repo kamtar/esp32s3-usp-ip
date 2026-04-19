@@ -1,0 +1,20 @@
+idf_component_register(
+    SRCS
+        "../main.c"
+        "../wifi_manager.c"
+        "../wifi_log_sink.c"
+        "../usb_host_driver.c"
+        "../usbip_server.c"
+    INCLUDE_DIRS
+        ".."
+        "../include"
+    REQUIRES
+        usb
+        esp_wifi
+        lwip
+        nvs_flash
+        esp_netif
+        esp_event
+        driver
+        freertos
+)
